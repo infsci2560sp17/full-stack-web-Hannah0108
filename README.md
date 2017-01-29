@@ -42,7 +42,7 @@ TODO : Modify to match your project specific Travis Build
 ## Web Site
 
 [QuickMovie](https://shielded-shelf-64265.herokuapp.com)
-![](https://www.goldstandardessay.com/wp-content/uploads/2016/02/Gold-Movie-Reviews.png)
+![](https://goldstandardessay.com/wp-content/uploads/2016/02/Gold-Movie-Reviews.png)
 
 ## Key Features
 
