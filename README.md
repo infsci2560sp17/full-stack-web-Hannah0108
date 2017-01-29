@@ -1,4 +1,4 @@
-QuickMovie
+##QuickMovie
 
 1. What is the proposed name for your Web application?
 
@@ -31,19 +31,18 @@ QuickMovie
 
 
 
-
-# TODO : Your Project Name
-
-TODO : Please provide a detailed project description.
-
 ## Build status
-
 TODO : Modify to match your project specific Travis Build
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-Hannah0108.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-Hannah0108)
 
+## Changelog
+
+[Changelog](CHANGELOG.md)
+    
 ## Web Site
 
-TODO : Please provide a link to your web site https://shielded-shelf-64265.herokuapp.com
+[QuickMovie](https://shielded-shelf-64265.herokuapp.com)
+![](https://www.goldstandardessay.com/wp-content/uploads/2016/02/Gold-Movie-Reviews.png)
 
 ## Key Features
 
@@ -65,7 +64,8 @@ TODO : please provide a description of at least 1 user input form including a sc
 
 ## API
 
-TODO : please provide a description of at least 1 API including a sample of request data and response data in both XML and JSON format.
+TODO : 
+please provide a description of at least 1 API including a sample of request data and response data in both XML and JSON format.
 
 ### API Method 1
 
