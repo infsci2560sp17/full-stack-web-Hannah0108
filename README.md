@@ -37,7 +37,7 @@ TODO : Modify to match your project specific Travis Build
 
 ## Changelog
 
-[Changelog](CHANGELOG.md)
+[Changelog](Changelog.md)
     
 ## Web Site
 
