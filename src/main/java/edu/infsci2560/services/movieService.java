@@ -1,14 +1,8 @@
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.infsci2560.services;
 
-import edu.infsci2560.models.dvd;
-import edu.infsci2560.models.dvd.WorkoutType;
-import edu.infsci2560.repositories.dvdRepository;
+import edu.infsci2560.models.movie;
+import edu.infsci2560.models.movie.MovieType;
+import edu.infsci2560.repositories.movieRepository;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,26 +24,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @RestController
 @RequestMapping("/public/api/dvds")
-public class dvdsService {
+public class movieService {
 
     @Autowired
-    private dvdRepository repository;
+    private movieRepository repository;
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Iterable<dvd>> list() {
+    public ResponseEntity<Iterable<movie>> list() {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findAll(), headers, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<dvd> list(@PathVariable("id") Long id) {
+    public ResponseEntity<movie> list(@PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<dvd> create(@RequestBody dvd dvd) {
+    public ResponseEntity<movie> create(@RequestBody movie movie) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(dvd), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(movie), headers, HttpStatus.OK);
     }
 }

@@ -1,10 +1,10 @@
-package edu.infsci2560.models;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package edu.infsci2560.models;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,43 +12,42 @@ import javax.persistence.Id;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-/**
- *
- * @author kolobj
- */
+
 @Entity
-public class dvd{
+public class movie {
 
     private static final long serialVersionUID = 1L;
 
-    public enum WorkoutType {
-        Unknown,
-        Strength,
-        Cardio,
-        CrossTrain
+    public enum MovieType {
+        Action,
+        Documentary,
+        Comedy,
+        Adventure,
+        Crime,
+        Others
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
-    protected String title;
-    protected WorkoutType workoutType;
+    protected String comment;
+    protected MovieType movietype;
 
-    public dvd() {
+    public movie() {
         this.id = Long.MAX_VALUE;
-        this.title = null;
-        this.workoutType = WorkoutType.Unknown;
+        this.comment = null;
+        this.movietype = MovieType.Action;
     }
 
-    public dvd(Long id, String name, WorkoutType workoutType) {
+    public movie (Long id, String comment, MovieType movietype) {
         this.id = id;
-        this.title = name;
-        this.workoutType = workoutType;
+        this.comment = comment;
+        this.movietype = movietype;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", workoutType=" + this.workoutType + " ]";
+        return "[ id=" + this.id + ", comment=" + this.comment + ", movieType=" + this.movietype + " ]";
     }
 
     @Override
@@ -64,40 +63,40 @@ public class dvd{
     /**
      * @return the name
      */
-    public String getTitle() {
-        return title;
+    public String getComment() {
+        return comment;
     }
 
     /**
-     * @param title the name to set
+    
      */
-    public void setTitle(String title) {
-        this.title = title;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     /**
-     * @return the workoutType
+     * @return
      */
-    public WorkoutType getWorkoutType() {
-        return workoutType;
+    public MovieType getmovieType() {
+        return movietype;
     }
 
     /**
-     * @param workoutType the workoutType to set
+     * @param 
      */
-    public void setWorkoutType(WorkoutType workoutType) {
-        this.workoutType = workoutType;
+    public void setmovieType(MovieType movietype) {
+        this.movietype = movietype;
     }
 
     /**
-     * @return the id
+     * @return 
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * @param id the id to set
+     * @param 
      */
     public void setId(Long id) {
         this.id = id;
