@@ -22,6 +22,7 @@
                 <tr>
                     <th>ID</th>
                     <th>comment</th>
+                    <th>moviename</th>
                     <th>movietype</th>
                 </tr>
                 <tr data-th-each="movie : ${movie}">
@@ -40,11 +41,13 @@
             Write quickreview of the movie : <br />
             <textarea style="width:400px;height:100px;" type="text" name="Comment" /><br />
             choose one Type:<br />
-            <input type="radio" name="movieType" value="Action" checked="checked" /> Action movie<br />
-            <input type="radio" name="movieType" value="Comedy" /> Comedy<br />
-            <input type="radio" name="movieType" value="Documentory" /> documentory<br />
-            <input type="radio" name="movieType" value="Crime" /> Crime<br />
             <input type="submit" value="Add movietype"/>
+            <select>
+             <option value ="Action">Action</option>
+            <option value ="Comedy">Comedy</option>
+            <option value="Documentory">Documentory</option>
+             <option value="Crime">Crime</option>
+</select>
         </form>
 
         <hr />
