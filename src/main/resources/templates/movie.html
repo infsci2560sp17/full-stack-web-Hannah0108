@@ -2,38 +2,52 @@
 <html>
     <head>
         <title>User Home</title>
+        <style>
+        table tr:nth-child(even){
+            background:bule;
+        }
+        table tr:nth-child(odd){
+            background:white;
+            table th {
+            background-color: black;
+            color: white;
+            padding: 5px;
+        </style>
     </head>
-    <body>
-        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s DVD's!</h1>
+    <body style="background-color:#FEFE06;">
+        <h1 data-th-inline="text" stype="test-align:center;">[[${#httpServletRequest.remoteUser}]]'s Quickview'!</h1>
 
         <div>
-            <table style="border: 1px solid black">
+            <table style="width: 50%">
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Workout Type</th>
-                </tr>                
-                <tr data-th-each="dvd : ${dvds}">
-                    <td data-th-text="${dvd.id}"></td>
-                    <td data-th-text="${dvd.title}"></td>
-                    <td data-th-text="${dvd.workoutType}"></td>
+                    <th>comment</th>
+                    <th>movietype</th>
+                </tr>
+                <tr data-th-each="movie : ${movie}">
+                    <td data-th-text="${movie.id}"></td>
+                    <td data-th-text="${movie.comment}"></td>
+                      <td data-th-text="${moviename.name}"></td>
+                    <td data-th-text="${movie.movieType}"></td>
                 </tr>
             </table>
         </div>
-        
+
         <hr />
-        Add DVD<br />
-        <form data-th-action="@{/dvds/add}" name="addDvdForm" method="post">
+        Add comment<br />
+        <form data-th-action="@{/movie/add}" name="addmovieForm" method="post">
             Title: <input type="text" name="title" /><br />
-            Workout Type:<br />
-            <input type="radio" name="workoutType" value="Unknown" checked="checked" /> Unknown<br />
-            <input type="radio" name="workoutType" value="Strength" /> Strength<br />
-            <input type="radio" name="workoutType" value="Cardio" /> Cardio<br />
-            <input type="radio" name="workoutType" value="CrossTrain" /> CrossTrain<br />
-            <input type="submit" value="Add Workout"/>
+            Write quickreview of the movie : <br />
+            <textarea style="width:400px;height:100px;" type="text" name="Comment" /><br />
+            choose one Type:<br />
+            <input type="radio" name="movieType" value="Action" checked="checked" /> Action movie<br />
+            <input type="radio" name="movieType" value="Comedy" /> Comedy<br />
+            <input type="radio" name="movieType" value="Documentory" /> documentory<br />
+            <input type="radio" name="movieType" value="Crime" /> Crime<br />
+            <input type="submit" value="Add movietype"/>
         </form>
-        
-        <hr />       
+
+        <hr />
         <form data-th-action="@{/logout}" method="post">
             <input type="submit" value="Sign Out"/>
         </form>
