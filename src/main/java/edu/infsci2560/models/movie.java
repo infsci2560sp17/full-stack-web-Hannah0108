@@ -32,17 +32,22 @@ public class movie {
     protected Long id;
     protected String comment;
     protected MovieType movietype;
+    protected String name;
 
     public movie() {
         this.id = Long.MAX_VALUE;
         this.comment = null;
         this.movietype = MovieType.Action;
+        this.name=null;
+
     }
 
-    public movie (Long id, String comment, MovieType movietype) {
+    public movie (Long id, String comment, MovieType movietype, String name) {
         this.id = id;
         this.comment = comment;
         this.movietype = movietype;
+        this.name=name;
+        
     }
 
     @Override
@@ -77,14 +82,14 @@ public class movie {
     /**
      * @return
      */
-    public MovieType getmovieType() {
+    public MovieType getMovieType() {
         return movietype;
     }
 
     /**
      * @param 
      */
-    public void setmovieType(MovieType movietype) {
+    public void setMovieType(MovieType movietype) {
         this.movietype = movietype;
     }
 
@@ -93,6 +98,16 @@ public class movie {
      */
     public Long getId() {
         return id;
+    }
+
+    /**
+     * @param 
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+     public String getName() {
+        return name;
     }
 
     /**

@@ -14,7 +14,7 @@
             padding: 5px;
         </style>
     </head>
-    <body style="background-color:#FEFE06;">
+    <body style="background-color:#E7E2DC;">
         <h1 data-th-inline="text" stype="test-align:center;">[[${#httpServletRequest.remoteUser}]]'s Quickview'!</h1>
 
         <div>
@@ -26,10 +26,10 @@
                     <th>movietype</th>
                 </tr>
                 <tr data-th-each="movie : ${movie}">
-                    <td data-th-text="${movie.id}"></td>
-                    <td data-th-text="${movie.comment}"></td>
-                      <td data-th-text="${moviename.name}"></td>
-                    <td data-th-text="${movie.movieType}"></td>
+                    <td style="text-align:center;vertical-align:middle;" data-th-text="${movie.id}"></td>
+                    <td style="width:400px;word-wrap:break-all;word-break: break-all;" data-th-text="${movie.comment}"></td>
+                   <td data-th-text="${movie.name}"></td>
+                    <td data-th-text="${movie.MovieType}"></td>
                 </tr>
             </table>
         </div>
@@ -37,7 +37,7 @@
         <hr />
         Add comment<br />
         <form data-th-action="@{/movie/add}" name="addmovieForm" method="post">
-            Title: <input type="text" name="title" /><br />
+            Moviename: <input type="text" name="name" /><br />
             Write quickreview of the movie : <br />
             <textarea style="width:400px;height:100px;" type="text" name="Comment" /><br />
             choose one Type:<br />

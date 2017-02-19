@@ -17,7 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 /**
  *
- * @author kolobj
+ * @author Hannah
  */
 @Controller
 public class movieController {
