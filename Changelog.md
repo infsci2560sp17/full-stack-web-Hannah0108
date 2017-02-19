@@ -7,6 +7,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### coming soon
 - TBD.
 
+## [v1.3] - 2017-02-18
+### Added
+
+    - a Entity were created: 
+        - movies
+        
+    - One Repository was created: 
+        - movieRepository
+    - One RESTful web service was created and JSON was returned
+        - movieService
+    - MVC Controller was created and get and post methods were implemented
+        - movieController
+    - MVC Page was created and wired to my Repository
+        - movies
+        
 #[v1.20] – 2017 – 01 – 24
 ### Added
 -	the project name.
@@ -27,6 +42,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 
 
-[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-Hannah0108/compare/v1.20...HEAD
+[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-Hannah0108/compare/v1.30...HEAD
+[1.3]: https://github.com/infsci2560sp17/full-stack-web-LeMU-Haruka/compare/1.20...1.30
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-Hannah0108/compare/v1.10...v1.20
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-BriHannah0108/compare/...v1.10

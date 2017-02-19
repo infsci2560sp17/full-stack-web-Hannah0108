@@ -18,7 +18,9 @@ public class FullStackWebApplication {
     public static void main(String[] args) {
        ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
       movieRepository repository = ctx.getBean(movieRepository.class);
-      repository.save(new movie(1L, "Greeting ! Here is LeMU-Haruka. ", MovieType.Action, "hahaha"));
+      repository.save(new movie(1L, "The Dark Knight” is a haunted film that leaps beyond its origins and becomes an engrossing tragedy. It creates characters we come to care about. That’s because of the performances, because of the direction, because of the writing, and because of the superlative technical quality of the entire production.  ", MovieType.Action, "Dark Knight"));
+      repository.save(new movie(2L, "The funniest movie character so far this year is a stuffed teddy bear. And the best comedy screenplay so far is Ted, the saga of the bear's friendship with a 35-year-old manchild. I know; this also was hard for me to believe. After memories of Mel Gibson's bond with a sock puppet, Ted was not high on the list of movies I was impatient to see. ", MovieType.Comedy, "TED"));
+      repository.save(new movie(3L, "Most of Martin Scorsese's films have been about men trying to realize their inner image of themselves. That's as true of Travis Bickle as of Jake LaMotta, Rupert Pupkin, Howard Hughes, the Dalai Lama, Bob Dylan or, for that matter, Jesus Christ. The Departed is about two men trying to live public lives that are the radical opposites of their inner realities. Their attempts threaten to destroy them, either by implosion or fatal betrayal. The telling of their stories involves a moral labyrinth, in which good and evil wear each other's masks. ", MovieType.Crime, "THE DEPARTED"));
     }
 
 //    @Bean
