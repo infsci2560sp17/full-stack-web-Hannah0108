@@ -56,11 +56,11 @@ TODO : Modify to match your project specific Travis Build
 
 ### Landing Page
 
-please provide a description of your landing page inluding a screen shot ![](landingpage.jpeg)
+ ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/landingpage.jpeg)
 
 ### User Input Form
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](UserINput.jpeg)
+TODO : please provide a description of at least 1 user input form including a screen shot ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/UserINput.jpeg)
 
 ## API
 
