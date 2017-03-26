@@ -63,69 +63,51 @@ As for a welcome page, it includes the navigation bar with “Quickmovie”, “
 
 ### User Input Form
 
-(Just For Example) The user is able to add the information of upcoming movies interms of moviename, release date, and the type. Users could share these information here. ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/UserINput.jpeg)
+(Just For Example) The user is able to add the information of upcoming movies in terms of moviename, release date, and the type. Users could share these information here. ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/UserINput.jpeg)
 
 ## API
-
-TODO : 
-please provide a description of at least 1 API including a sample of request data and response data in both XML and JSON format.
+(JUST FOR EXAMPLE)
+Function "GET"
 
 ### API Method 1
 
-    POST photos/:id/tags
+    GET public/api/actor/id
 
 #### Parameters
 
-- **id** _(required)_ — The Photo ID to add tags for.
-- **tags** _(required)_ — Comma separated tags.
-
+- **id** 
 #### Response
 
-A JSON or XMLobject containing the PhotoID and list of tags accepted.
+A JSON  containing the data by ID.
 
 #### Errors
 
 All known errors cause the resource to return HTTP error code header together with a JSON array containing at least 'status' and 'error' keys describing the source of error.
 
-- **404 Not Found** — The photo was not found.
+- **404 Not Found** — 
 
 #### Example
 
 ##### Request
 
-    POST /v1/photos/123456/tags
-
-##### Body
-
-    tags=cute,puppy
+    https://shielded-shelf-64265.herokuapp.com/public/api/actor/4
 
 
 ##### JSON Response
 
 ```json
 {
-    "photoId": 123456,
-    "tags": ["cute", "puppy"]
+   {"id":4,"comment":"Men in Black III opened on May 25, 2012 with Smith again reprising his role as Agent J. This was his first major starring role in four years","rating":"goodacting","actorName":"Will Smith","movieName":"Men in Black "}
 }
 ```
 
 ##### XML Response
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<PhotoTags>
-    <photoId>123456</PhotoId>
-        <tags>
-            <tag>cute</tag>
-            <tag>puppy</tag>
-        </tags>
-</PhotoTags>
-```
+NA
 
 ## Technologies Used
-
-TODO : List all technologies used in your project
 
 - [Spring Boot](https://projects.spring.io/spring-boot/) - Takes an opinionated view of building production-ready Spring applications.
 - [Thymleaf](http://www.thymeleaf.org/) - Thymeleaf is a modern server-side Java template engine for both web and standalone environments.
 - [Maven](https://maven.apache.org/) - Apache Maven is a software project management and comprehension tool.
+- [Bootstrap](http://getbootstrap.com)- Bootstrap contains the template of HTML- and CSS for typography, forms, buttons, navigation, etc.
