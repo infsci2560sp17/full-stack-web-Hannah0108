@@ -7,6 +7,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### coming soon
 - TBD.
 
+## [v1.4] - 2017-03-24
+
+### Added
+- Created three new entities -- Upcoming movies; Famous movies Actor Comments;
+- Created three new corresponding Repositories, Services, Models, Html files, and Controllers.
+- Created a Storage package for uploading files, added to the Movie Comments page.
+- Created a 'Homepage' html file as main page.
+- Implemented Bootstrap for navigation part.
+- Added a delete function in "ActorController.java"
+
+### Changed
+- Updated the 'home' html file.
+- Updated the 'README' file.
+- Updated 'FullStackWebApplication.java', added some data for initialization.
+- Updated 'MvcComfig.java', added a 'Controller' for the new 'Homepage' HTML file.
+
+
 ## [v1.3] - 2017-02-18
 ### Added
 

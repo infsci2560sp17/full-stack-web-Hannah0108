@@ -3,6 +3,12 @@ package edu.infsci2560;
 import edu.infsci2560.models.movie;
 import edu.infsci2560.models.movie.MovieType;
 import edu.infsci2560.repositories.movieRepository;
+import edu.infsci2560.models.Actor;
+import edu.infsci2560.models.Actor.Rating;
+//import edu.infsci2560.models.Actor.MovieType;
+import edu.infsci2560.repositories.ActorRepository;
+import edu.infsci2560.models.MostPopular;
+import edu.infsci2560.repositories.MostPopularRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,10 +24,17 @@ public class FullStackWebApplication {
     public static void main(String[] args) {
        ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
       movieRepository repository = ctx.getBean(movieRepository.class);
+     
+      MostPopularRepository repository2=ctx.getBean(MostPopularRepository.class);
       repository.save(new movie(1L, "The Dark Knight” is a haunted film that leaps beyond its origins and becomes an engrossing tragedy.", MovieType.Action, "Dark Knight"));
      repository.save(new movie(2L, "The funniest movie character so far this year is a stuffed teddy bear. And the best comedy screenplay so far is Ted ", MovieType.Comedy, "TED"));
      repository.save(new movie(3L, "Most of Martin Scorsese's films have been about men trying to realize their inner image of themselves. ", MovieType.Crime, "THE DEPARTED"));
+      ActorRepository repository1=ctx.getBean(ActorRepository.class);
+     repository1.save(new Actor(1L, "Brant", "The Dark Knight” is a haunted film that leaps beyond its origins and becomes an engrossing tragedy.", "Dark Knight",Rating.goodacting ));
+     repository2.save(new MostPopular(1L, "The Dark Knight", " is a haunted film that leaps beyond its origins and becomes an engrossing tragedy.", MostPopular.MovieType.Action));
+    
     }
+    
 
 //    @Bean
 //    public CommandLineRunner commandLineRunner(ApplicationContext ctx) {

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Upcoming</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" href="../../css/bootstrap.min.css"/>
+        		<link rel="stylesheet" type="text/css" th:href="@{/css/dashboard.css}" href="../../css/dashboard.css"/>
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/starter-template.css}" href="../../css/starter-template.css"/>
+
+        
+    </head>
+    <body>
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">QuickMovie</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Check here</a></li>
+             <li><a data-th-href="@{/Homepage}">Home</a></li>
+            <li><a data-th-href="@{/movie}">Movie Comments</a></li>
+           <li><a data-th-href="@{/Coming}">Upcoming Movies</a></li> 
+           <li><a data-th-href="@{/MostPopular}">Famous Movies </a></li> 
+            <li><a data-th-href="@{/Actor}">Actor Comments</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+        <h1 data-th-inline="text">Rencent Release Movie! Updated Movie！</h1>
+<Table>
+<Tr>
+<Td>
+        <img src="https://s.yimg.com/uu/api/res/1.2/mV4vlwD8tCtP7HYTfxhhZw--/aD00MzM7dz0xMDAwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en_US/Entertainment/Variety/dogs-purpose21.jpg" style="width:400px;height:240px;"/>
+       </Td>
+
+<Td>
+        <img src="https://ls-digitalfox.s3.amazonaws.com/uploads/2017/02/Logan-1.-Digital-Fox-Media.jpg" style="width:400px;height:240px;"/>
+        </Td>
+<Td>
+        <img src="https://i.ytimg.com/vi/oU-vyN_THJM/maxresdefault.jpg" style="width:400px;height:240px;"/>
+        </Td>
+        </Tr>
+        <Tr>
+        <Td>
+        A Dog's Purpose
+        </Td>
+        <Td>
+        Logan
+        </Td>
+        <Td>
+        The Fate of the Furious
+        </Td>
+        </Tr>
+        <Tr>
+<Td>
+         <img src="https://i.ytimg.com/vi/7V381L1yjtk/maxresdefault.jpg" style="width:400px;height:240px;"/>
+       </Td>
+
+<Td>
+        <img src="http://funender.com/wp-content/uploads/2016/12/upcoming-movies-2017.jpg" style="width:400px;height:240px;"/>
+        </Td>
+<Td>
+         <img src="https://s.yimg.com/uu/api/res/1.2/uxyAnJrTN4m4yeXXOGx8jQ--/Zmk9ZmlsbDtweW9mZj0wO3c9NjAwO2g9MzM4O3NtPTE7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/creatr-images/GLB/2017-01-24/0352dfc0-e276-11e6-961a-f7118b277468_SuperfanMovies_s2017e029_OscarNoms_Predictions_Thumb.jpg" style="width:400px;height:240px;"/>
+        </Td>
+        </Tr>
+        <Tr>
+        <Td>
+        The Croods 2
+        </Td>
+        <Td>
+        Kong: Skull Island
+        </Td>
+        <Td>
+        La La Land
+        </Td>
+        </Tr>
+        </Table>
+     
+
+<hr />
+<div>
+            <table style="width: 50%">
+                <tr>
+                    <th style="text-align:center;vertical-align:middle;">ID</th>
+                    <th>moviename</th>
+                    <th>Release</th>
+                    <th>movietype</th>
+                </tr>
+                <tr data-th-each="Coming : ${Coming}">
+                    <td style="text-align:center;vertical-align:middle;" data-th-text="${Coming.id}"></td>
+                    <td style="text-align:center;vertical-align:middle;" data-th-text="${Coming.name}"></td>
+                    <td style="text-align:center;vertical-align:middle;" data-th-text="${Coming.Release}"></td>
+    
+                    <td style="text-align:center;vertical-align:middle;" data-th-text="${Coming.MovieType}"></td>
+                </tr>
+            </table>
+        </div>
+        
+         <hr />
+        Add new movie<br />
+        <form data-th-action="@{/Coming/add}" name="addmovieForm" method="post">
+            Moviename: <input type="text" name="name" /><br />
+            Release Date: <input type="text" name="Release" /><br />
+          
+            choose one Type:<br />
+            <input type="submit" value="Add new movie"/>
+            <select>
+             <option value ="Action">Action</option>
+            <option value ="Comedy">Comedy</option>
+            <option value="Documentory">Documentory</option>
+             <option value="Crime">Crime</option>
+             <option value="Romance">Romance</option>
+             <option value="Animation">Animation</option>
+             <option value="Science Fiction">Science Fiction</option>
+             <option value="Others">Others</option>
+</select>
+        </form>
+
+        <hr />
+    
+        <div>Back <a data-th-href="@{/Homepage}">here</a> ! </div>
+           
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
