@@ -25,15 +25,18 @@ public class Coming {
         Comedy,
         Adventure,
         Crime,
+        Romance,
+        Animation,
         Others
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
+     protected String name;
     protected String Release;
     protected MovieType movietype;
-    protected String name;
+   
 
     public Coming() {
         this.id = Long.MAX_VALUE;
@@ -43,17 +46,18 @@ public class Coming {
 
     }
 
-    public Coming (Long id, String Release, MovieType movietype, String name) {
+    public Coming (Long id,String name, String Release, MovieType movietype) {
         this.id = id;
+        this.name=name;
         this.Release = Release;
         this.movietype = movietype;
-        this.name=name;
+        
         
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", Release=" + this.Release + ", movieType=" + this.movietype + " ]";
+        return "[ id=" + this.id + ", name=" + this.name + ", Release=" + this.Release + ", movieType=" + this.movietype + " ]";
     }
 
     @Override

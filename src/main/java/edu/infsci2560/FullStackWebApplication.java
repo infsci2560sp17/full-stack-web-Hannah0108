@@ -9,6 +9,9 @@ import edu.infsci2560.models.Actor.Rating;
 import edu.infsci2560.repositories.ActorRepository;
 import edu.infsci2560.models.MostPopular;
 import edu.infsci2560.repositories.MostPopularRepository;
+import edu.infsci2560.models.Coming;
+import edu.infsci2560.repositories.ComingRepository;
+
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,13 +28,26 @@ public class FullStackWebApplication {
        ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
       movieRepository repository = ctx.getBean(movieRepository.class);
      
-      MostPopularRepository repository2=ctx.getBean(MostPopularRepository.class);
+      
       repository.save(new movie(1L, "The Dark Knight” is a haunted film that leaps beyond its origins and becomes an engrossing tragedy.", MovieType.Action, "Dark Knight"));
      repository.save(new movie(2L, "The funniest movie character so far this year is a stuffed teddy bear. And the best comedy screenplay so far is Ted ", MovieType.Comedy, "TED"));
      repository.save(new movie(3L, "Most of Martin Scorsese's films have been about men trying to realize their inner image of themselves. ", MovieType.Crime, "THE DEPARTED"));
+      
       ActorRepository repository1=ctx.getBean(ActorRepository.class);
-     repository1.save(new Actor(1L, "Brant", "The Dark Knight” is a haunted film that leaps beyond its origins and becomes an engrossing tragedy.", "Dark Knight",Rating.goodacting ));
-     repository2.save(new MostPopular(1L, "The Dark Knight", " is a haunted film that leaps beyond its origins and becomes an engrossing tragedy.", MostPopular.MovieType.Action));
+     repository1.save(new Actor(1L, "Will Smith", "Men in Black III opened on May 25, 2012 with Smith again reprising his role as Agent J. This was his first major starring role in four years", "Men in Black ",Rating.goodacting ));
+     repository1.save(new Actor(1L, "Tom Cruise", " he was so young followed by a major supporting role as a crazed military academy student in Taps later that year. ", " Endless Love ",Rating.pooracting ));
+     
+     MostPopularRepository repository2=ctx.getBean(MostPopularRepository.class);
+     repository2.save(new MostPopular(1L, "Casablanca", " https://www.youtube.com/watch?v=0KGOB1WIjRs", MostPopular.MovieType.Romance));
+    repository2.save(new MostPopular(2L, "Titanic", " https://www.youtube.com/watch?v=jIhicnTgArM", MostPopular.MovieType.Romance));
+    repository2.save(new MostPopular(3L, "Men in Black", "https://www.youtube.com/watch?v=d6dZ8RXahC0", MostPopular.MovieType.Action));
+    
+    
+    ComingRepository repository3=ctx.getBean(ComingRepository.class);
+    repository3.save(new Coming(1L, "Beauty And The Beast", " March 17, 2017", Coming.MovieType.Romance));
+    repository3.save(new Coming(2L, "The Fate Of The Furious", "April 14, 2017 ", Coming.MovieType.Action));
+    repository3.save(new Coming(3L, "Smurfs: The Lost Village", "April 7, 2017 ", Coming.MovieType.Animation));
+    
     
     }
     

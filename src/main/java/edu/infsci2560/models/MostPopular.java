@@ -19,6 +19,7 @@ public class MostPopular {
         Comedy,
         Adventure,
         Crime,
+        Romance,
         Others
     }
 

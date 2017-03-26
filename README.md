@@ -42,25 +42,25 @@ TODO : Modify to match your project specific Travis Build
 ## Web Site
 
 [QuickMovie](https://shielded-shelf-64265.herokuapp.com)
-![](https://goldstandardessay.com/wp-content/uploads/2016/02/Gold-Movie-Reviews.png)
+![]((https://github.com/infsci2560sp17/full-stack-web-Hannah0108/src/main/resources/img/icon.png)
 
 ## Key Features
 
-TODO : Please list key features of your project.
-
-* Key Feature 1
-* Key Feature 2
-* Key Feature N
+* The user could find the most popular movies in history in this website
+* The information of upcoming movies will be provided 
+* Comments of both the movie and the actor could be applied through this plateform
+* The user could upload their own files into website
+* All data can be retrieved through the API as a JSON format.
 
 ## Project Details
 
 ### Landing Page
 
-TODO : please provide a description of your landing page inluding a screen shot ![](https://.../image.JPG)
+please provide a description of your landing page inluding a screen shot ![](landingpage.jpeg)
 
 ### User Input Form
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](https://.../image.jpg)
+TODO : please provide a description of at least 1 user input form including a screen shot ![](UserINput.jpeg)
 
 ## API
 
