@@ -32,7 +32,7 @@
 
 
 ## Build status
-TODO : Modify to match your project specific Travis Build
+
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-Hannah0108.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-Hannah0108)
 
 ## Changelog
@@ -47,20 +47,23 @@ TODO : Modify to match your project specific Travis Build
 ## Key Features
 
 * The user could find the most popular movies in history in this website
+* The user is able to add the information of popular movie.
 * The information of upcoming movies will be provided 
 * Comments of both the movie and the actor could be applied through this plateform
 * The user could upload their own files into website
 * All data can be retrieved through the API as a JSON format.
+* Users are able to modify and delete the data (comments or other information).
 
 ## Project Details
 
 ### Landing Page
+As for a welcome page, it includes the navigation bar with “Quickmovie”, “join us” and “contact”. Besides, at the middle of the page, the user could get more information of this website while clicking on the word "click” of the sentence “click to find movie now". 
 
  ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/landingpage.jpeg)
 
 ### User Input Form
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/UserINput.jpeg)
+(Just For Example) The user is able to add the information of upcoming movies interms of moviename, release date, and the type. Users could share these information here. ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/UserINput.jpeg)
 
 ## API
 
