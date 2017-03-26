@@ -42,7 +42,7 @@ TODO : Modify to match your project specific Travis Build
 ## Web Site
 
 [QuickMovie](https://shielded-shelf-64265.herokuapp.com)
-![]((https://github.com/infsci2560sp17/full-stack-web-Hannah0108/src/main/resources/img/icon.png)
+![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/src/main/resources/img/icon.png)
 
 ## Key Features
 
