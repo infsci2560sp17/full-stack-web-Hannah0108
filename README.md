@@ -73,6 +73,8 @@ As for a welcome page, it includes the navigation bar with “Quickmovie”, “
 ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/hot.PNG)
 ### Add recommandations
 ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/link.jpeg)
+### Update Comments
+![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/update.jpeg)
 ### Upload files 
 ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/upload.jpeg)
 ## API
