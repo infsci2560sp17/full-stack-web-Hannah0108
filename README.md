@@ -63,19 +63,19 @@ As for a welcome page, it includes the navigation bar with “Quickmovie”, “
 ### Home Page
 ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/mainpage.PNG)
 ### User Input Form
-## Log in 
+### Log in 
 ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/login.jpeg)
-## Add Comments for Movies
+### Add Comments for Movies
 ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/movie.PNG)
-## Add Comments for Actors
+### Add Comments for Actors
 ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/Actor.PNG)
-## Add Upcoming movies
+### Add Upcoming movies
 ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/hot.PNG)
-## Add recommandations
-
-## Upload files 
-
-### API
+### Add recommandations
+![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/link.jpeg)
+### Upload files 
+![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/upload.jpeg)
+## API
 (JUST FOR EXAMPLE)
 Function "GET", "Delete"
 
