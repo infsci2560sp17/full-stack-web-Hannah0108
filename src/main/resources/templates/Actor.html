@@ -7,8 +7,16 @@
 		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
 		<link rel="stylesheet" type="text/css" th:href="@{/css/starter-template.css}" href="../../css/starter-template.css"/>
-
-        
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style type = "text/css">
+           
+            body{
+                 background:url("https://zellox.com/wp-content/uploads/2016/02/web-background-images.jpg");
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -31,6 +39,9 @@
            <li><a data-th-href="@{/MostPopular}">Famous Movies </a></li> 
             <li><a data-th-href="@{/Actor}">Actor Comments</a></li>
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+                <li><a href="/files">UPLOAD FILES HERE</a></li>
+            </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -79,13 +90,15 @@ Scarlett Johansson
 
 <hr />
 <div>
-            <table style="width: 50%">
+            <table align="center"  class="table table-hover" style="width: 50%">
                 <tr>
                     <th style="text-align:center;vertical-align:middle;">ID</th>
                     <th style="text-align:center;vertical-align:middle;">actorname</th>
                     <th style="text-align:center;vertical-align:middle;">comment</th>
                     <th style="text-align:center;vertical-align:middle;">moviename</th>
                     <th style="text-align:center;vertical-align:middle;">Rating</th>
+                    <th>Delete the comment</th>
+                    <th>Edit Selection</th>
                 </tr>
                 <tr data-th-each="Actor : ${Actor}">
                     <td style="text-align:center;vertical-align:middle;" data-th-text="${Actor.id}"></td>
@@ -93,6 +106,11 @@ Scarlett Johansson
                     <td style="text-align:center;vertical-align:middle;" data-th-text="${Actor.comment}"></td>
                     <td style="text-align:center;vertical-align:middle;" data-th-text="${Actor.movieName}"></td>
                     <td style="text-align:center;vertical-align:middle;" data-th-text="${Actor.rating}"></td>
+                     <td><form data-th-object="${Actor}" data-th-action="@{/Actor/{id}(id=${Actor.id})}" data-th-method="delete">
+                        <input type="submit" value="delete" />
+                    </form>
+                     <td><a data-th-href="@{/Actor/edit/{id}(id=${Actor.id})}">edit</a></td>
+                    </td>
                 </tr>
             </table>
         </div>
@@ -101,8 +119,8 @@ Scarlett Johansson
         Add new Comment<br />
         <form data-th-action="@{/Actor/add}" name="addmovieForm" method="post">
             Actor name: <input type="text" name="actorName" /><br />
-            Leave your Comments: <input type="text" name="comment" /><br />
-            Movie name: <input type="text" name="movieName" /><br />
+            Leave your Comments: <br /><textarea style="width:400px;height:100px;"  type="text" name="comment" /><br />
+                        Movie name: <input type="text" name="movieName" /><br />
           
             Rating for the skills:<br />
             <input type="submit" value="Add rating"/>
@@ -120,13 +138,13 @@ Scarlett Johansson
 </select>
         </form>
 <hr />
-        Delete comments<br />
+        <!--Delete comments<br />
         <form data-th-action="@{/Actor/delete}" name="deleteActor" method="delete">
             Input the id of comments that you want to delete: <input type="text" name="id" /><br /> 
             <input type="submit" value="Delete actor"/>
         </form>
    
-        <hr />
+        <hr />-->
     
         <div>Back <a data-th-href="@{/Homepage}">here</a> ! </div>
            

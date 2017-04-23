@@ -9,17 +9,17 @@
 		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
 		<link rel="stylesheet" type="text/css" th:href="@{/css/starter-template.css}" href="../../css/starter-template.css"/>
-<style>
-            body,h1 {font-family: "Raleway", sans-serif}
-            body, html {height: 100%}
-            .bgimg {
-                background-image: url('https://s.yimg.com/uu/api/res/1.2/mV4vlwD8tCtP7HYTfxhhZw--/aD00MzM7dz0xMDAwO3NtPTE7YXBwaWQ9eXRhY2h5b24-/http://media.zenfs.com/en_US/Entertainment/Variety/dogs-purpose21.jpg');
-                min-height: 100%;
-                background-position: center;
-                background-size: cover;
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style type="text/css">
+            .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+                height: 700px;
+                width: 500px;
+                margin: auto;
             }
-            
-        </style>
+            </style>
   </head>
 
   <body>
@@ -43,39 +43,69 @@
            <li><a data-th-href="@{/MostPopular}">Movie Ratings</a></li> 
             <li><a data-th-href="@{/Actor}">Actor Comments</a></li>
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+                <li><a href="/files">UPLOAD FILES HERE</a></li>
+            </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+     <div class="container">
+     
+        <br />
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+      <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="http://orig01.deviantart.net/ef20/f/2015/296/3/5/spectre_movie_poster_by_tldesignn-d9e2kmf.png" alt="d"  />
+                </div>
 
-   <div>
-   <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-          </ul>
-        </div>
-        </div>
-        
+                <div class="item">
+                    <img src="https://a.dilcdn.com/bl/wp-content/uploads/sites/25/2014/03/Maleficent-Poster.jpg" alt="a" width="800" height="400" />
+                </div>
+    
+                <div class="item">
+                    <img src="http://www.printmag.com/wp-content/uploads/home_sweet_hell-movie-poster-design.jpeg?91875e" alt="b" width="800" height="400" />
+                </div>
+
+                <div class="item">
+                    <img src="http://www.kitaro10.com/wp-content/uploads/2010/03/film-poster-41.jpg" alt="c" width="800" height="400" />
+                </div>
+
+                <div class="item">
+                    <img src="https://s-media-cache-ak0.pinimg.com/736x/c1/ab/78/c1ab782b93344350aa968604dbfdc9d8.jpg" alt="e" width="800" height="1000" />
+                </div>
+                
+                <div class="item">
+                    <img src="http://www.impawards.com/2016/posters/xmen_apocalypse_ver18_xxlg.jpg" alt="f" width="800" height="800" />
+                </div>
+                
+            </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            </div>
+            </div>
+
+   
           <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
         <div class="w3-display-topleft w3-padding-large w3-xlarge">
             
         </div>
         <div class="w3-display-middle">
-            <h1 class="w3-jumbo w3-animate-middle">Welcome to the world of Movie</h1>
+            <h1 class="w3-jumbo w3-animate-middle">Welcome </h1>
             <hr class="w3-border-grey" style="margin:auto;width:40%" />
           
         </div>

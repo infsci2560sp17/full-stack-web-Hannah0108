@@ -60,14 +60,24 @@
 As for a welcome page, it includes the navigation bar with “Quickmovie”, “join us” and “contact”. Besides, at the middle of the page, the user could get more information of this website while clicking on the word "click” of the sentence “click to find movie now". 
 
  ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/landingpage.jpeg)
-
+### Home Page
+![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/mainpage.PNG)
 ### User Input Form
+## Log in 
+![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/login.jpeg)
+## Add Comments for Movies
+![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/movie.PNG)
+## Add Comments for Actors
+![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/Actor.PNG)
+## Add Upcoming movies
+![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/hot.PNG)
+## Add recommandations
 
-(Just For Example) The user is able to add the information of upcoming movies in terms of moviename, release date, and the type. Users could share these information here. ![](https://github.com/infsci2560sp17/full-stack-web-Hannah0108/blob/master/src/main/resources/img/UserINput.jpeg)
+## Upload files 
 
-## API
+### API
 (JUST FOR EXAMPLE)
-Function "GET"
+Function "GET", "Delete"
 
 ### API Method 1
 
@@ -104,6 +114,18 @@ All known errors cause the resource to return HTTP error code header together wi
 ##### XML Response
 
 NA
+### API Method 2
+
+ Delete public/api/actor/id
+
+#### Parameters
+
+- **id** 
+
+#### Response
+
+Delete the item by ID
+
 
 ## Technologies Used
 

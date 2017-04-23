@@ -44,4 +44,13 @@ public class ActorController {
         return new ModelAndView("Actor", "Actor", repository.findAll());
     }
     
+       @RequestMapping(value = "Actor/{id}", 
+            method = RequestMethod.DELETE, 
+            consumes="application/x-www-form-urlencoded", 
+            produces = "application/json")
+    public ModelAndView delete( @Valid Actor Actor, BindingResult result) {
+        repository.delete(Actor);
+        return new ModelAndView("Actor", "Actor", repository.findAll());
+    }
+    
 }

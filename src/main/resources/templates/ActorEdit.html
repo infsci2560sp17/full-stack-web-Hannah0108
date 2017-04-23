@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>actors</title>
+        <title>actors update</title>
         <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" href="../../css/bootstrap.min.css"/>
         		<link rel="stylesheet" type="text/css" th:href="@{/css/dashboard.css}" href="../../css/dashboard.css"/>
 		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
@@ -14,13 +14,13 @@
            
             body{
                  background:url("https://zellox.com/wp-content/uploads/2016/02/web-background-images.jpg");
-                
+                text-align: center;
             }
         </style>
     </head>
     <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div >
+     <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -45,25 +45,38 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-        <div data-th-if="${message}">
-            <h2 data-th-text="${message}"/>
-        </div>
-
-        <div>
-            <form data-th-action="@{/files}" name="uploadFileForm" method="POST" enctype="multipart/form-data" >                
-<!--            <form data-th-action="@{/files(${_csrf.parameterName}=${_csrf.token})}" name="uploadFileForm" method="POST" enctype="multipart/form-data" >                                -->
-                File to upload:<input type="file" name="file" /><br />
-                <input type="submit" value="Upload" />
-            </form>
-        </div>
-
-        <div>
-            <ul>
-                <li data-th-each="file : ${files}">
-                    <a data-th-href="${file}" data-th-text="${file}"></a>
-                </li>
-            </ul>
-        </div>
+    <br />
+    <br />
+    <br />
+          <div class="container">
+          
+    <h1 data-th-inline="text">Update the comment for Actor</h1>
+        <br />
+      
+        <form 
+            data-th-action="@{/Actor/edit/{id}(id=${Actor.id})}" 
+            data-th-object="${Actor}" 
+            data-th-method="put" role="form">
+            Id: <span data-th-utext="${Actor.id}"/><br /> <br />
+          Actor Name: <input type="text" name="name" data-th-value="${Actor.actorName}" /><br /> <br />
+           Comment:  <textarea style="width:400px;height:100px;"  type="text" name="comment" /><br /><br />
+          moviename: <input type="text" name="moviename" data-th-value="${Actor.movieName}"  /><br /> <br />
+          
+            Rating for the skills:<br />
+            <select>
+            
+             <option value ="pooracting">pooracting</option>
+            <option value ="goodacting">goodacting</option>
+            <option value="greatacting">greatacting</option>
+            </select>
+            <br />
+            <br />
+            <input type="submit" value="Update the comment for the actor"/><br />
+        </form>
+                
+        <br />
+        
+        </div><!--end content left-->
+        
     </body>
 </html>

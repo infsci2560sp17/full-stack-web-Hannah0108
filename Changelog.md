@@ -3,9 +3,22 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
-## [Unreleased]
-### coming soon
-- TBD.
+## [v1.5] - 2017-04-22
+
+### Added
+- Added images to the main page, implemented CSS for rolling presenting. 
+- Added updating function for Actor page.
+- Added css, bootstrap, js, jquery to all pages.
+- Implemented Bootstrap for pictures viewing part.
+- Added a new delete function in "ActorController.java".
+
+### Changed
+- Updated the 'log in' html file.
+- Updated the 'README' file.
+- Modified CHANGELOG.md
+- Updated All the background and layout for all pages.
+- Updated Delete function in ActorController.
+- Deleted some useless parts ---eg. side navigation column in homepage.html.
 
 ## [v1.4] - 2017-03-24
 
